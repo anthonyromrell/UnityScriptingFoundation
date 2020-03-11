@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace UnityScriptingFoundation.Scripts.Behaviours
-{
-    public class TriggerBehaviours : MonoBehaviour
+public class TriggerBehaviours : MonoBehaviour
     {
         public UnityEvent triggerEnterEvent;
     
@@ -11,5 +9,4 @@ namespace UnityScriptingFoundation.Scripts.Behaviours
         {
             triggerEnterEvent.Invoke();
         }
-    }
 }

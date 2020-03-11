@@ -1,9 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace UnityScriptingFoundation.Scripts.Behaviours
-{
-    public class MouseBehaviours : MonoBehaviour
+public class MouseBehaviours : MonoBehaviour
     {
         public UnityEvent mouseDownEvent, mouseEnterEvent;
 
@@ -16,5 +14,4 @@ namespace UnityScriptingFoundation.Scripts.Behaviours
         {
             mouseEnterEvent.Invoke();
         }
-    }
 }
