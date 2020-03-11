@@ -1,15 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class MouseBehaviours : MonoBehaviour
+namespace UnityScriptingFoundation.Scripts.Behaviours
 {
-    public UnityEvent mouseDownEvent, mouseEnterEvent;
-    private void OnMouseDown()
+    public class MouseBehaviours : MonoBehaviour
     {
-        mouseDownEvent.Invoke();
-    }
-    private void OnMouseEnter()
-    {
-        mouseEnterEvent.Invoke();
+        public UnityEvent mouseDownEvent, mouseEnterEvent;
+
+        private void OnMouseDown()
+        {
+            mouseDownEvent.Invoke();
+        }
+
+        private void OnMouseEnter()
+        {
+            mouseEnterEvent.Invoke();
+        }
     }
 }

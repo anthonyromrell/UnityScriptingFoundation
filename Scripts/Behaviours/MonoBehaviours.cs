@@ -1,11 +1,16 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-public class MonoBehaviours : MonoBehaviour
+namespace UnityScriptingFoundation.Scripts.Behaviours
 {
-    public UnityEvent startEvent;
-    void Start()
+    public class MonoBehaviours : MonoBehaviour
     {
-        startEvent.Invoke();
+        public UnityEvent startEvent;
+
+        void Start()
+        {
+            startEvent.Invoke();
+        }
     }
 }
+    
