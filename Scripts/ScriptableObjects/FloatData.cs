@@ -1,12 +1,15 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu]
-public class FloatData : ScriptableObject
+namespace UnityScriptingFoundation.Scripts.Behaviours
 {
-    public float value = 1f;
-
-    public void ChangeValue(float number)
+    [CreateAssetMenu]
+    public class FloatData : ScriptableObject
     {
-        value += number;
+        public float value = 1f;
+
+        public void ChangeValue(float number)
+        {
+            value += number;
+        }
     }
 }

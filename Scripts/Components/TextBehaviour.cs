@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Text))]
-public class TextBehaviour : MonoBehaviour
+namespace UnityScriptingFoundation.Scripts.Behaviours
 {
-    private Text textObj;
-    public IntData dataObj;
-    
-    void Start()
+    [RequireComponent(typeof(Text))]
+    public class TextBehaviour : MonoBehaviour
     {
-        textObj = GetComponent<Text>();
-    }
+        private Text textObj;
+        public IntData dataObj;
 
-    
-    void Update()
-    {
-        textObj.text = dataObj.value.ToString();
+        void Start()
+        {
+            textObj = GetComponent<Text>();
+        }
+
+
+        void Update()
+        {
+            textObj.text = dataObj.value.ToString();
+        }
     }
-    
 }

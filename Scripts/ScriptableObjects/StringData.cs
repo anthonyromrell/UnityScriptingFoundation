@@ -1,7 +1,10 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu]
-public class StringData : ScriptableObject
+namespace UnityScriptingFoundation.Scripts.Behaviours
 {
-    public string value;
+    [CreateAssetMenu]
+    public class StringData : ScriptableObject
+    {
+        public string value;
+    }
 }
