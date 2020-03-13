@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
-public class CharacterMover : MonoBehaviour
+public class CharacterControllerBehaviour : MonoBehaviour
 {
     private CharacterController controller;
     public Vector3 positionDirection;
