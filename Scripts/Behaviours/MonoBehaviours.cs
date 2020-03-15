@@ -1,19 +1,27 @@
 ﻿using System;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
 public class MonoBehaviours : MonoBehaviour
 {
-    public UnityEvent awakeEvent, startEvent, quitEvent, destroyEvent;
+    public float holdTime = 0.1f;
+    public UnityEvent awakeEvent, startEvent, onEnableEvent, quitEvent, destroyEvent;
 
     private void Awake()
     {
         awakeEvent.Invoke();
     }
 
-    private void Start()
+    private IEnumerator Start()
     {
+        yield return new WaitForSeconds(holdTime);
         startEvent.Invoke();
+    }
+
+    private void OnEnable()
+    {
+        onEnableEvent.Invoke();
     }
 
     private void OnDestroy()
