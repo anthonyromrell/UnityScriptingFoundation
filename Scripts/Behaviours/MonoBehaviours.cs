@@ -1,10 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class MonoBehaviours : MonoBehaviour
 {
-    public UnityEvent awakeEvent, startEvent, quitEvent;
-
+    public UnityEvent awakeEvent, startEvent, quitEvent, destroyEvent;
 
     private void Awake()
     {
@@ -14,6 +14,11 @@ public class MonoBehaviours : MonoBehaviour
     private void Start()
     {
         startEvent.Invoke();
+    }
+
+    private void OnDestroy()
+    {
+        destroyEvent.Invoke();
     }
 
     private void OnApplicationQuit()
