@@ -2,7 +2,7 @@
 using UnityEngine.UI;
 
 [RequireComponent(typeof(Text))]
-public class TextBehaviour : MonoBehaviour
+public class BasicTextBehaviour : MonoBehaviour
 {
     private Text textObj;
 
