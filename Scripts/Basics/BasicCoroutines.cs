@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Coroutines : MonoBehaviour
+public class BasicCoroutines : MonoBehaviour
 {
     public int counter = 3;
     public float seconds = 1f;
