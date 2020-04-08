@@ -4,7 +4,7 @@ using UnityEngine;
 [CreateAssetMenu]
 public class CollectableList : ScriptableObject
 {
-    public List<Collectable> collectables;
+    public List<Collectible> collectables;
     
     
 }
