@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class CharacterControllerBehaviour : MonoBehaviour
@@ -10,6 +11,8 @@ public class CharacterControllerBehaviour : MonoBehaviour
     public float jumpForce = 30f;
     private int jumpCount = 0;
     public int jumpCountMax = 2;
+    public UnityEvent jumpEvent;
+    
     
     void Start()
     {
@@ -28,6 +31,7 @@ public class CharacterControllerBehaviour : MonoBehaviour
         
         if (Input.GetButtonDown("Jump") && jumpCount < jumpCountMax)
         {
+            jumpEvent.Invoke();
             positionDirection.y = jumpForce;
             jumpCount++;
         }
