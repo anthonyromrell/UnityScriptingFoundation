@@ -11,8 +11,9 @@ public class NavAgentBehaviour : MonoBehaviour
     public float speed = 8f;
     private Transform currentDestination;
     private int i;
-    private bool canHunt;
-    
+    public bool canHunt;
+    public Vector3 offset;
+    public Transform offsetArt;
     public List<Transform> patrolPoints;
     
     void Start()
@@ -20,6 +21,7 @@ public class NavAgentBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
         currentDestination = transform;
+        offsetArt.rotation = Quaternion.Euler(offset);
     }
 
     private void OnTriggerEnter(Collider other)
@@ -33,9 +35,11 @@ public class NavAgentBehaviour : MonoBehaviour
         canHunt = false;
         currentDestination = transform;
     }
+    
 
     void Update()
     {
+        transform.LookAt(agent.steeringTarget);
         if (canHunt)
         {
             agent.destination = currentDestination.position;
