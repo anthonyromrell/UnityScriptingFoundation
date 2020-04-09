@@ -2,12 +2,7 @@
 using UnityEngine;
 
 [CreateAssetMenu]
-public class CollectableList : ScriptableObject, ICollect
+public class CollectableList : ScriptableObject
 {
 //    public List<Collectible> collectables;
-}
-
-public interface ICollect
-{
-   
 }

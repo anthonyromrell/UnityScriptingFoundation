@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class MonoBehaviours : MonoBehaviour
 {
     public float holdTime = 0.1f;
-    public UnityEvent awakeEvent, startEvent, onEnableEvent, quitEvent, destroyEvent;
+    public UnityEvent awakeEvent, startEvent, onEnableEvent, onDisableEvent, quitEvent, destroyEvent;
 
     private void Awake()
     {
@@ -22,6 +22,11 @@ public class MonoBehaviours : MonoBehaviour
     private void OnEnable()
     {
         onEnableEvent.Invoke();
+    }
+    
+    private void OnDisable()
+    {
+        onDisableEvent.Invoke();
     }
 
     private void OnDestroy()
