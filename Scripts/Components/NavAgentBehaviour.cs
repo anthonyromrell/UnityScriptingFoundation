@@ -12,8 +12,6 @@ public class NavAgentBehaviour : MonoBehaviour
     private Transform currentDestination;
     private int i;
     public bool canHunt;
-    public Vector3 offset;
-    public Transform offsetArt;
     public List<Transform> patrolPoints;
     
     void Start()
@@ -21,7 +19,6 @@ public class NavAgentBehaviour : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         agent.speed = speed;
         currentDestination = transform;
-        offsetArt.rotation = Quaternion.Euler(offset);
     }
 
     private void OnTriggerEnter(Collider other)
