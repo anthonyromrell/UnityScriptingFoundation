@@ -1,12 +1,18 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Events;
 
 public class TriggerBehaviours : MonoBehaviour
+{
+    public UnityEvent triggerEnterEvent, triggerExitEvent;
+
+    private void OnTriggerEnter(Collider other)
     {
-        public UnityEvent triggerEnterEvent;
-    
-        private void OnTriggerEnter(Collider other)
-        {
-            triggerEnterEvent.Invoke();
-        }
+        triggerEnterEvent.Invoke();
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        triggerExitEvent.Invoke();
+    }
 }
