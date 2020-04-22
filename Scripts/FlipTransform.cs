@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class Flip : MonoBehaviour
+public class FlipTransform : MonoBehaviour
 {
     public KeyCode key1 = KeyCode.LeftArrow, key2 = KeyCode.RightArrow;
     public float direction1 = 0, direction2 = 180;
