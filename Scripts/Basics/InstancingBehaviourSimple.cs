@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class InstancingBehaviour : MonoBehaviour
+public class InstancingBehaviourSimple : MonoBehaviour
 {
     public GameObject prefab;
 
