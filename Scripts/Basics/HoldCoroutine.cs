@@ -1,18 +1,26 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class HoldCoroutine : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float holdTime = 2f;
+    private WaitForSeconds waitObj;
+    public UnityEvent holdEvent;
+
+    private void Start()
     {
-        
+        waitObj = new WaitForSeconds(holdTime);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void RunCoroutine()
     {
-        
+        StartCoroutine(Run());
+    }
+
+    private IEnumerator Run()
+    {
+        yield return waitObj;
+        holdEvent.Invoke();
     }
 }
