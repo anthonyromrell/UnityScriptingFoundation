@@ -6,7 +6,8 @@ public class AnimatorBehaviour : MonoBehaviour
     private Animator animatorObj;
     public int intValue = 1;
     public float floatValue = 1f;
-    void Start()
+
+    private void Awake()
     {
         animatorObj = GetComponent<Animator>();
     }
@@ -21,12 +22,12 @@ public class AnimatorBehaviour : MonoBehaviour
         animatorObj.SetFloat(parameterName, floatValue);
     }
 
-    public void ChangeBoolParameterTrue (string parameterName)
+    public void SetBoolParameterTrue (string parameterName)
     {
         animatorObj.SetBool(parameterName, true);
     }
     
-    public void ChangeBoolParameterFalse (string parameterName)
+    public void SetBoolParameterFalse (string parameterName)
     {
         animatorObj.SetBool(parameterName, false);
     }
