@@ -10,11 +10,14 @@ public class RigidBodyBehaviour : MonoBehaviour
    private void Start()
    {
       rigidBodyObj = GetComponent<Rigidbody>();
+      
    }
+   
+   
 
-   private void OnCollisionEnter(Collision other)
-   {
-      forceVector.y = force;
-      rigidBodyObj.AddForce(forceVector);
-   }
+   // private void OnCollisionEnter(Collision other)
+   // {
+   //    forceVector.y = force;
+   //    rigidBodyObj.AddForce(forceVector);
+   // }
 }
